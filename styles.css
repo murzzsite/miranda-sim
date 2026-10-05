@@ -408,3 +408,21 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .markets { grid-template-columns: 1fr; }
 }
+
+/* TARIFFS */
+.tariffs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.tariff { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 22px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 14px; }
+.tariff h3 { font-size: 20px; }
+.tariff__price { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.tariff__price small { display: block; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: var(--text-dim); margin-top: 6px; }
+.tariff ul { display: flex; flex-direction: column; gap: 8px; }
+.tariff li { font-size: 14px; display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.tariff li span:first-child { color: var(--text-dim); }
+.tariff li span:last-child { font-weight: 600; text-align: right; }
+.tariff__apps { font-size: 12.5px; color: var(--text-dim); margin-top: auto; }
+.tariff__apps b { color: var(--text); font-weight: 600; }
+.reg-steps { counter-reset: rs; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.reg-steps li { position: relative; padding-left: 30px; font-size: 14px; color: var(--text-dim); }
+.reg-steps li::before { counter-increment: rs; content: counter(rs); position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+@media (max-width: 1100px) { .tariffs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .tariffs { grid-template-columns: 1fr; } }
